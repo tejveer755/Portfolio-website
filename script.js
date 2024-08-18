@@ -163,38 +163,38 @@ gsap.to(".box9", {
 });
 
 
-// animate.from('.connect', {
-//   opacity: 0,
-//   y: -150,
-//   x: -50,
-//   duration: 2,
-//   scrollTrigger: {
-//     trigger: '.connect',
-//     scroller: "body",
-//     start: "top 40%",
-//     end: "top 50%",
-//     scrub: 3,
-//     // markers: true,
-//     // pin: true,
-//   }
-// });
+animate.from('.connect', {
+  opacity: 0,
+  y: -150,
+  x: -50,
+  duration: 2,
+  scrollTrigger: {
+    trigger: '.connect',
+    scroller: "body",
+    start: "top 40%",
+    end: "top 50%",
+    scrub: 3,
+    // markers: true,
+    // pin: true,
+  }
+});
 
-// animate.from(".socialMedia", {
-//   y: -50,
-//   x: -30,
-//   opacity: 0,
-//   duration: 1,
-//   stagger: 0.6,
-//   scrollTrigger: {
-//     trigger: '.socialMedia',
-//     scroller: "body",
-//     start: "top 40%",
-//     end: "top 50%",
-//     scrub: 3,
-//     // markers: true,
-//     // pin: true,
-//   }
-// });
+animate.from(".socialMedia", {
+  y: -50,
+  x: -30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.6,
+  scrollTrigger: {
+    trigger: '.socialMedia',
+    scroller: "body",
+    start: "top 40%",
+    end: "top 50%",
+    scrub: 3,
+    // markers: true,
+    // pin: true,
+  }
+});
 
 
 // Eye-following Cursor Effect
