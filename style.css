@@ -11,9 +11,10 @@
 html,
 body {
     width: 100vw;
-    height: 100%;
+    /* height: 100vh; */
     background-color: #121212;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     /* padding-bottom: 100px; */
 }
 
@@ -29,7 +30,7 @@ body {
 nav {
     display: flex;
     flex-direction: row;
-    padding: 50px 80px;
+    padding: 3vw 4vw;
     width: 100%;
     text-transform: capitalize;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -40,7 +41,7 @@ nav h1 {
 }
 
 nav img {
-    width: 200px;
+    width: 16vw;
     height: auto;
 }
 
@@ -51,6 +52,7 @@ a {
 ul {
     list-style: none;
     width: 600px;
+    max-width: 70%;
     margin-left: auto;
     display: flex;
     flex-direction: row;
@@ -58,7 +60,7 @@ ul {
 }
 
 li {
-    font-size: 25px;
+    font-size: 1.8rem;
     cursor: pointer;
     transition: all 0.7s ease;
 }
@@ -70,7 +72,7 @@ li:hover {
 
 .page {
     width: 100%;
-    height: 85%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -86,32 +88,32 @@ li:hover {
     width: 90%;
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
     font-family: "IBM Plex Mono", monospace;
-    padding-left: 50px;
+    padding: 4vw;
+    margin-top: 40px;
     border-radius: 25px;
     margin-left: 50px;
+    transition: margin 0.2s ease-in;
 }
-
-
 
 
 .aboutMe {
     margin-top: 75px;
-    margin-left: 130px;
-    height: 100%;
+    margin-left: 7vw;
+    /* height: 100%; */
     text-transform: capitalize;
     max-width: 90%;
+    padding: 3.6vw;
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
     justify-content: unset;
     align-items: unset;
     gap: 20px;
     border-radius: 25px;
-    /* font-family: "Edu VIC WA NT Beginner", cursive; */
     font-family: "IBM Plex Mono", monospace;
 }
 
 .heading {
     font-size: 2.5rem;
-    margin: 50px;
+    /* margin: 50px; */
     letter-spacing: 3px;
     font-weight: 900;
     border-bottom: 3px solid white;
@@ -127,7 +129,7 @@ li:hover {
 
 .aboutMe p {
     font-size: 1.3rem;
-    margin-left: 60px;
+    /* margin-left: 60px; */
     margin-top: 0;
     width: fit-content;
 }
@@ -135,18 +137,15 @@ li:hover {
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 4vw;
     margin-top: 15px;
 }
 
 .avatar {
-    width: 250px;
+    width: 19vw;
     height: auto;
     border-radius: 50px;
 }
-
-
-
 
 .projectPage {
     margin-top: 70px;
@@ -161,7 +160,7 @@ li:hover {
 }
 
 .projectPage .heading {
-    margin-top: 15px;
+    margin: 15px 30px;
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
     border: none;
     border-radius: 15px;
@@ -251,26 +250,26 @@ li:hover {
     width: fit-content;
 }
 
-
-
-
 .skills {
-    height: 100%;
+    height: 100vh;
     position: relative;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 100px;
-    /* margin-bottom: 70px; */
+    margin: 100px 0;
 }
 
 img {
     object-fit: cover;
     object-position: center;
     border-radius: 15px;
+}
+
+#card img {
     width: 100%;
+
 }
 
 #card {
-    width: 130px;
+    width: 8vw;
     position: absolute;
     /* opacity: 0; */
 }
@@ -326,40 +325,21 @@ img {
 .skills .heading {
     position: absolute;
     text-transform: capitalize;
-    font-size: 40px;
-    top: 44%;
-    left: 40%;
-    margin-top: 15px;
+    font-size: 4vw;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
     border: none;
     border-radius: 15px;
     padding: 20px;
-    font-size: 30px;
 }
 
 
 
 
-.eye {
-    width: 300px;
-    height: 280px;
-    border-radius: 50%;
-    background-color: white;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.eye span {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: black;
-    position: absolute;
-    pointer-events: none;
-    transition: transform 0.2s linear;
-}
 
 .text-animation {
     background-color: #4e4e4e;
@@ -416,7 +396,9 @@ img {
     flex-direction: row;
     width: 90%;
     gap: 10px;
-    margin-left: 30px;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 3.6vw;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -437,30 +419,56 @@ img {
 
 .connect a {
     font-size: 20px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.connect a:hover {
+    transform: scale(1.06);
+    margin-left: 15px;
 }
 
 .icon {
     width: 45px;
     height: auto;
     border-radius: 0px;
-    margin-left: 50px;
     margin-right: 10px;
 }
 
 .eyes-div {
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
     gap: 20px;
     justify-content: center;
-    margin-right: 70px;
+    margin-right: 5vw;
     position: relative;
+}
+
+.eye {
+    width: 20vw;
+    height: 18vw;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye span {
+    width: 9vw;
+    height: 9vw;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 0.2s linear;
 }
 
 .eyes-div h2 {
     position: absolute;
-    bottom: 10%;
-    font-size: 3.5rem;
+    top: 25vw;
+    font-size: 3vw;
 
 }
 
@@ -478,169 +486,108 @@ img {
     height: 10%;
 }
 
-.msg{
+.msg {
     display: none;
 }
 
+.menu-toggle {
+    opacity: 0;
+    font-size: 2rem;
+    background: none;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+}
 
-@media (max-width:500px) {
-
-    html,
-    body {
-        width: 200%;
-        height: 100vh;
+@media (max-width:830px) {
+    .projectPage{
+    display: none;
     }
-
     nav {
-        width: 100%;
-        height: 40%;
-        align-items: center;
-        justify-content: space-between;
+        margin: 10px 0;
     }
 
     nav img {
-        width: 500px;
+        width: 40vw;
     }
 
-    ul {
-        margin: 0;
-        width: 60%;
-    }
-
-    nav ul li {
-        height: 100%;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 3rem;
-    }
-
-    .page {
-        width: 95%;
-        height: 200%;
-        font-size: 7rem;
+    .homePage {
+        font-size: 5.5vw;
+        margin: 40px auto;
+        line-height: 1.4;
     }
 
     .aboutMe {
-        height: 330%;
-    }
-
-    .heading {
-        font-size: 10rem;
-    }
-
-    .hobbies {
-        font-size: 7rem;
-    }
-
-    .aboutMe p {
-        font-size: 3rem;
-        margin-left: 60px;
-        margin-top: 0;
-        width: fit-content;
+        margin: 0 auto;
     }
 
     .container {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin-top: 15px;
     }
 
     .avatar {
-        width: 60%;
+        width: 46vw;
         margin: 30px 0;
     }
 
+    #card {
+        width: 10vw;
+    }
 
-    .projectPage {
-        margin-top: 70px;
-        /* height: 200%; */
-        /* background-color: rgb(76, 148, 207); */
-        gap: 15px;
-        white-space: nowrap;
-        text-transform: uppercase;
-        overflow: hidden;
-        justify-content: unset;
-        align-items: unset;
-        margin-bottom: 80px;
+    .eye {
+        display: none;
     }
-    
-    .projectPage .heading {
-        margin-top: 15px;
-        box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
-        border: none;
-        border-radius: 25px;
-        padding: 40px;
-        font-size: 6rem;
-        margin-bottom: 300px;
+
+    .eyes-div h2 {
+        position: static;
     }
-    
-    
-    
-    .details {
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        width: 98%;
-        height: 94%;
-        border-radius: 15px;
-        background-color: #222121b0;
-        transition: opacity 0.7s ease;
-        display: flex;
+
+    .connect {
         flex-direction: column;
-        padding: 50px 45px;
         gap: 20px;
-        justify-content: end;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    
-    .details p {
-        width: 80%;
-        font-size: 19px;
-        white-space: wrap;
-        /* margin: 20px 0; */
-        color: #faf2f2;
-        margin-bottom: 20px;
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #121212;
+        flex-direction: row;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 90vw;
+        transition: all 0.5s ease;
     }
-    
-    .details a {
-        text-decoration: none;
-        width: fit-content;
-        height: fit-content;
-        border-radius: 50px;
-        color: black;
-        font-size: 18px;
-        padding: 15px;
-        font-weight: 600;
-        border: none;
-        background-color: white;
-        cursor: pointer;
-        margin: 15px;
-        margin-left: 0;
+
+    .menu-toggle {
+        opacity: 1;
     }
-    
-    .projectName {
-        font-size: 3.5rem;
-        border-bottom: 2px white solid;
-        width: fit-content;
+
+    .menu.active {
+        display: flex;
     }
-    
-    #card{
-        width: 200px;
+
+    ul {
+        flex-direction: column;
+        width: 100%;
     }
-.skills .heading{
-    font-size: 5rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    li {
+        padding: 10px 0;
+        font-size: 1.7rem;
+    }
 }
-.connect{
-    display: none;
-}
-.bottom_nav{
-    display: none;
-}
-.msg{
-    display: inline;
-}
+
+
+@media (max-width:530px) {
+    #card {
+        width: 15vw;
+    }
+
+    .aboutMe p {
+        font-size: 1.38rem;
+    }
 }
