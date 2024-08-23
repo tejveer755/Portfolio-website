@@ -50,10 +50,10 @@ function animateBox(selector, topValue, sideValue, side, scaleValue) {
   gsap.to(selector, {
     scrollTrigger: {
       trigger: selector === ".box1" ? ".skills" : selector,
-      start: "top 0%",
-      end: "top -100%",
+      start: "top 100%",
       scrub: true,
-      pin: selector === ".box1", // Pin only for the first box
+      // markers: true,
+      // pin: selector === ".box1", // Pin only for the first box
     },
     top: topValue,
     [side]: sideValue, // Dynamically set left or right based on the side argument
@@ -68,7 +68,7 @@ function triggerAnimations() {
 
   if (width >= 1024) {
     // Desktop
-    animateBox(".box1", "13%", "33%", "right", 1.3);
+    animateBox(".box1", "13%", "40%", "right", 1.3);
     animateBox(".box2", "14%", "25%", "left", 1.5);
     animateBox(".box3", "24%", "20%", "right", 1.58);
     animateBox(".box4", "52%", "18%", "left", 1.6);
@@ -120,7 +120,7 @@ gsap.from(".socialMedia", {
     start: "top 40%",
     end: "top 50%",
     scrub: 3,
-    // markers: true,
+    markers: true,
     // pin: true,
   },
 });

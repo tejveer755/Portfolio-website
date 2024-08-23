@@ -500,15 +500,18 @@ img {
 }
 
 @media (max-width:830px) {
+    body{
+        overflow: hidden;
+    }
     .projectPage{
     display: none;
     }
     nav {
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
     nav img {
-        width: 40vw;
+        width: 60vw;
     }
 
     .homePage {
@@ -589,5 +592,8 @@ img {
 
     .aboutMe p {
         font-size: 1.38rem;
+    }
+    li{
+        font-size: 1.3rem;
     }
 }
