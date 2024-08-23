@@ -32,18 +32,33 @@ animate.from(".aboutMe", {
   },
 });
 
-gsap.to(".projectPage .projectWrapper", {
-  transform: "translate(-520%)",
-  scrollTrigger: {
-    trigger: ".projectPage",
-    scroller: "body",
-    // start: "top 0%",
-    // end: "top -200%",  // Increased end value to slow down the scroll
-    scrub: 1, // Increased scrub value for a smoother and slower effect
-    pin: true,
-    // markers: true,
-  },
-});
+const width = window.innerWidth;
+
+
+function projectAnimate(){
+  if (width>830) {
+    gsap.to(".projectPage .projectWrapper", {
+      transform: "translate(-520%)",
+      scrollTrigger: {
+        trigger: ".projectPage",
+        scroller: "body",
+        // start: "top 0%",
+        // end: "top -200%",  // Increased end value to slow down the scroll
+        scrub: 1, // Increased scrub value for a smoother and slower effect
+        pin: true,
+        // markers: true,
+      },
+    });
+
+  }
+console.log(width);
+
+}
+ 
+projectAnimate();
+
+
+  window.addEventListener("resize", projectAnimate);
 
 // Reusable GSAP animation function
 function animateBox(selector, topValue, sideValue, side, scaleValue) {
@@ -52,6 +67,7 @@ function animateBox(selector, topValue, sideValue, side, scaleValue) {
       trigger: selector === ".box1" ? ".skills" : selector,
       start: "top 100%",
       scrub: true,
+      // scroller: ".skills"
       // markers: true,
       // pin: selector === ".box1", // Pin only for the first box
     },
@@ -64,7 +80,6 @@ function animateBox(selector, topValue, sideValue, side, scaleValue) {
 
 // Function to trigger animations based on screen width
 function triggerAnimations() {
-  const width = window.innerWidth;
 
   if (width >= 1024) {
     // Desktop
@@ -90,7 +105,7 @@ function triggerAnimations() {
     animateBox(".box9", "70%", "30%", "left", 1.2);
   } else {
     // Mobile
-    animateBox(".box1", "30%", "25%", "right", 1.1);
+    animateBox(".box1", "35%", "25%", "right", 1.1);
     animateBox(".box2", "34%", "12%", "left", 1.3);
     animateBox(".box3", "43%", "10%", "right", 1.45);
     animateBox(".box4", "48%", "13%", "left", 1.45);
@@ -120,7 +135,7 @@ gsap.from(".socialMedia", {
     start: "top 40%",
     end: "top 50%",
     scrub: 3,
-    markers: true,
+    // markers: true,
     // pin: true,
   },
 });
@@ -166,5 +181,10 @@ const down = () => {
 // Event listener for the toggle button
 toggleButton.addEventListener("click", () => {
   menu.classList.toggle("active");
-  down(); // Adjust margin based on menu's state
+  down(); 
 });
+
+const hideNav = () => {
+  menu.classList.remove("active");
+  down();
+};

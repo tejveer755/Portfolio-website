@@ -10,7 +10,7 @@
 
 <body>
     
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <img src="./assets/logo.png" alt="logo">
     
         <button class="menu-toggle" aria-label="Toggle Menu">
@@ -18,11 +18,11 @@
         </button>
     
         <ul class="menu">
-            <li><a href="#homePage">Home</a></li>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#connect">Connect</a></li>
+            <li onclick="hideNav()"><a href="#navbar">Home</a></li>
+            <li onclick="hideNav()"><a href="#aboutMe">About Me</a></li>
+            <li onclick="hideNav()"><a href="#projects">Projects</a></li>
+            <li onclick="hideNav()"><a href="#skills">Skills</a></li>
+            <li onclick="hideNav()"><a href="#connect">Connect</a></li>
         </ul>
     </nav>
     <div class="page homePage" id="homePage">
