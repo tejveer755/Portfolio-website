@@ -65,8 +65,8 @@ li {
     transition: all 0.7s ease;
 }
 
-li:active {
-    transform: scale(1.1);
+li:hover {
+    transform: scale(1.2);
     font-size: 28px;
 }
 
@@ -521,6 +521,7 @@ img {
         font-size: 5.5vw;
         margin: 40px auto;
         line-height: 1.4;
+        font-weight:900;
     }
 
     .aboutMe {

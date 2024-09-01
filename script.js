@@ -27,38 +27,31 @@ animate.from(".aboutMe", {
     start: "top 0%",
     end: "top 50%",
     scrub: 3,
-    // markers: true,
-    // pin: true,
   },
 });
 
 const width = window.innerWidth;
 
-
-function projectAnimate(){
-  if (width>830) {
+function projectAnimate() {
+  if (width > 830) {
     gsap.to(".projectPage .projectWrapper", {
-      transform: "translate(-520%)",
+      transform: "translate(-600%)",
       scrollTrigger: {
         trigger: ".projectPage",
         scroller: "body",
-        // start: "top 0%",
-        // end: "top -200%",  // Increased end value to slow down the scroll
-        scrub: 1, // Increased scrub value for a smoother and slower effect
+    
+        scrub: 0.7, 
         pin: true,
         // markers: true,
       },
     });
-
   }
-console.log(width);
-
+  console.log(width);
 }
- 
+
 projectAnimate();
 
-
-  window.addEventListener("resize", projectAnimate);
+window.addEventListener("resize", projectAnimate);
 
 // Reusable GSAP animation function
 function animateBox(selector, topValue, sideValue, side, scaleValue) {
@@ -80,7 +73,6 @@ function animateBox(selector, topValue, sideValue, side, scaleValue) {
 
 // Function to trigger animations based on screen width
 function triggerAnimations() {
-
   if (width >= 1024) {
     // Desktop
     animateBox(".box1", "13%", "40%", "right", 1.3);
@@ -181,7 +173,7 @@ const down = () => {
 // Event listener for the toggle button
 toggleButton.addEventListener("click", () => {
   menu.classList.toggle("active");
-  down(); 
+  down();
 });
 
 const hideNav = () => {
