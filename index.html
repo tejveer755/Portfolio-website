@@ -5,24 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejveer SIngh's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+
     <nav class="navbar" id="navbar">
         <img src="./assets/logo.png" alt="logo">
-    
+
         <button class="menu-toggle" aria-label="Toggle Menu">
-            ☰
+            <i class="ri-menu-4-line"></i>
         </button>
-    
+
+
+
+
         <ul class="menu">
-            <li onclick="hideNav()"><a href="#navbar">Home</a></li>
+            <li onclick="hideNav()"><a href="#homepage">Home</a></li>
             <li onclick="hideNav()"><a href="#aboutMe">About Me</a></li>
             <li onclick="hideNav()"><a href="#projects">Projects</a></li>
             <li onclick="hideNav()"><a href="#skills">Skills</a></li>
             <li onclick="hideNav()"><a href="#connect">Connect</a></li>
+            <div class="close_btn" onclick="hideNav()">
+                <i class="ri-close-large-fill "></i>
+            </div>
         </ul>
     </nav>
     <div class="page homePage" id="homePage">
@@ -38,7 +45,8 @@
     <div class="page aboutMe" id="aboutMe">
         <h1 class="heading">About Me</h1>
         <p>
-            Heyy buddy! I'm Tejveer Singh, an 18-year-old Front-End Developer based in Delhi, India. <br> Currently, I'm pursuing a
+            Heyy buddy! I'm Tejveer Singh, an 18-year-old Front-End Developer based in Delhi, India. <br> Currently, I'm
+            pursuing a
             Bachelor's in Computer Applications from <br> the Institute of Information Technology, where I’m diving deep
             into the<br>
             world of technology and software development.
@@ -143,7 +151,9 @@
                 <img src="./assets/quizApp.png" alt="Quiz app">
                 <div class="details">
                     <h3 class="projectName">Quiz game </h3>
-                    <p>A fun and interactive way to test your knowledge across various topics. Built with a sleek and elegant design, this app provides an intuitive user experience with multiple-choice questions and tracks your progress.</p>
+                    <p>A fun and interactive way to test your knowledge across various topics. Built with a sleek and
+                        elegant design, this app provides an intuitive user experience with multiple-choice questions
+                        and tracks your progress.</p>
                     <div>
                         <a href="https://github.com/tejveer755/Quiz-app.git">View code</a>
                         <a href="https://tejveer755.github.io/Quiz-app/">View site</a>
@@ -262,15 +272,15 @@
         <div class="eyes-div">
             <div class="eye"><span></span></div>
             <div class="eye"><span></span></div>
-           
+
         </div>
     </div>
-    <div class="bottom_nav" >
+    <div class="bottom_nav">
         <!-- <h2><img src="./assets/logo.png" alt="logo"></h2> -->
         <h2 style="text-align: center;">Thanks For scrolling!</h2>
-        
+
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -2,13 +2,6 @@
 gsap.registerPlugin(ScrollTrigger);
 const animate = gsap.timeline();
 
-animate.from("nav", {
-  x: -30,
-  opacity: 0,
-  duration: 0.5,
-  delay: 0.5,
-});
-
 animate.from(".homePage", {
   opacity: 0,
   y: -100,
@@ -39,8 +32,8 @@ function projectAnimate() {
       scrollTrigger: {
         trigger: ".projectPage",
         scroller: "body",
-    
-        scrub: 0.7, 
+
+        scrub: true,
         pin: true,
         // markers: true,
       },
@@ -155,28 +148,19 @@ document.addEventListener("mousemove", (event) => {
   });
 });
 
-const toggleButton = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
+const tl = gsap.timeline();
 
-// Function to adjust the margin based on the menu's state
-const down = () => {
-  // Ensure the ID matches the one used in HTML
-  const homePageElement = document.querySelector("#homePage");
-
-  if (menu.classList.contains("active")) {
-    homePageElement.style.marginTop = "100px";
-  } else {
-    homePageElement.style.marginTop = "0px"; // Reset margin or set to another value as needed
-  }
-};
-
-// Event listener for the toggle button
-toggleButton.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  down();
+tl.to(".menu", {
+  right: 0,
+  duration: 0.3,
 });
 
-const hideNav = () => {
-  menu.classList.remove("active");
-  down();
-};
+tl.pause();
+
+// Event listener for the toggle button
+const open_btn = document.querySelector(".menu-toggle");
+const close_btn = document.querySelector(".close_btn");
+
+const hideNav = () => tl.reverse();
+open_btn.addEventListener("click", () => tl.play());
+close_btn.addEventListener("click", () => tl.reverse());

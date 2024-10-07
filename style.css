@@ -67,7 +67,7 @@ li {
 
 li:hover {
     transform: scale(1.2);
-    font-size: 28px;
+    /* font-size: 28px; */
 }
 
 .page {
@@ -92,6 +92,7 @@ li:hover {
     margin-top: 40px;
     border-radius: 25px;
     margin-left: 50px;
+    z-index: 1;
     transition: margin 0.2s ease-in;
 }
 
@@ -500,13 +501,17 @@ img {
     cursor: pointer;
 }
 
+.close_btn {
+    display: none;
+}
+
 @media (max-width:830px) {
-    body {
-        overflow: hidden;
+    .menu-toggle {
+        opacity: 1;
     }
 
-    .projectPage {
-        /* display: none; */
+    body {
+        overflow: hidden;
     }
 
     nav {
@@ -521,7 +526,7 @@ img {
         font-size: 5.5vw;
         margin: 40px auto;
         line-height: 1.4;
-        font-weight:900;
+        font-weight: 900;
     }
 
     .aboutMe {
@@ -555,36 +560,44 @@ img {
         gap: 20px;
     }
 
-    .menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #121212;
-        flex-direction: row;
-        width: 90%;
-        margin: 0 auto;
-        max-width: 90vw;
+    ul.menu {
+        position: fixed;
+        /* This ensures the menu stays fixed on the screen */
+        top: 0%;
+        right: -100%;
+        background: rgba(53, 51, 51, 0.55);
+        /* Better color format */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1000;
+        /* High z-index to ensure it's above all other elements */
+        text-align: start;
+        width: 50%;
+        height: 100vh;
+        /* Takes up the full height of the viewport */
+        backdrop-filter: blur(40px);
         transition: all 0.5s ease;
     }
 
-    .menu-toggle {
-        opacity: 1;
-    }
 
-    .menu.active {
-        display: flex;
-    }
-
-    ul {
-        flex-direction: column;
-        width: 100%;
+    .close_btn {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        cursor: pointer;
+        font-size: 2rem;
     }
 
     li {
-        padding: 10px 0;
-        font-size: 1.5rem;
+        padding: 30px 0;
+        font-size: 2rem;
+        margin-left: 40px;
+    }
+    li:hover{
+        transform: scale(1);
+        font-size: 2.3rem;
     }
 
     /* ---------------------------------------PROJECT PAGE--------------------------------------------------------- */
