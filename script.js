@@ -17,9 +17,10 @@ animate.from(".aboutMe", {
   scrollTrigger: {
     trigger: ".aboutMe",
     scroller: "body",
-    start: "top 0%",
-    end: "top 50%",
+    start: "top 40%",
+    end: "top 40%",
     scrub: 3,
+    // markers: true,
   },
 });
 
@@ -148,19 +149,12 @@ document.addEventListener("mousemove", (event) => {
   });
 });
 
-const tl = gsap.timeline();
-
-tl.to(".menu", {
-  right: 0,
-  duration: 0.3,
-});
-
-tl.pause();
-
 // Event listener for the toggle button
 const open_btn = document.querySelector(".menu-toggle");
 const close_btn = document.querySelector(".close_btn");
+const navbar = document.querySelector(".menu");
 
-const hideNav = () => tl.reverse();
-open_btn.addEventListener("click", () => tl.play());
-close_btn.addEventListener("click", () => tl.reverse());
+const hideNav = () => (navbar.style.right = "-70%");
+
+open_btn.addEventListener("click", () => (navbar.style.right = "0"));
+close_btn.addEventListener("click", close_nav());

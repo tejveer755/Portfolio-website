@@ -564,7 +564,7 @@ img {
         position: fixed;
         /* This ensures the menu stays fixed on the screen */
         top: 0%;
-        right: -100%;
+        right: -50%;
         background: rgba(53, 51, 51, 0.55);
         /* Better color format */
         display: flex;
